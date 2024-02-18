@@ -1,0 +1,6 @@
+@EDA_FC3_HostAddress = http://localhost:3003
+
+GET {{EDA_FC3_HostAddress}}/v1/Balances
+Accept: application/json
+
+###
