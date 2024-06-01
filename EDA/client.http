@@ -1,0 +1,31 @@
+
+### send 10 from Jane to John
+
+POST http://localhost:8080/transactions HTTP/1.1
+Content-Type: application/json
+
+{
+    "account_id_from": "97f4af79-1c93-48a8-889c-9b355ac3209a",
+    "account_id_to": "02c0fd04-e21d-4a97-9ddc-178e0691648e",
+    "amount": 10
+}
+
+### send 10 from John to Jane
+
+POST http://localhost:8080/transactions HTTP/1.1
+Content-Type: application/json
+
+{
+    "account_id_from": "02c0fd04-e21d-4a97-9ddc-178e0691648e",
+    "account_id_to": "97f4af79-1c93-48a8-889c-9b355ac3209a",
+    "amount": 4
+}
+
+### consulting balance of Jane
+GET http://localhost:3003/v1/balances/97f4af79-1c93-48a8-889c-9b355ac3209a HTTP/1.1
+Content-Type: application/json
+
+
+### consulting balance of John
+GET http://localhost:3003/v1/balances/02c0fd04-e21d-4a97-9ddc-178e0691648e HTTP/1.1
+Content-Type: application/json
